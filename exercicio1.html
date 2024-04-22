@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="mensagem">Olá, Mundo!</h1>
+    <button id="mudarTexto" onclick="mudarTextoEEstilo()">Mudar Texto</button>
+    <script>
+        function mudarTextoEEstilo() {
+    
+            var mensagem = document.getElementById("mensagem");
+            
+            mensagem.textContent = "Texto Alterado!";
+       
+            mensagem.style.color = "blue";
+            mensagem.style.fontSize = "20px";
+        }
+    </script>
+</body>
+</html>

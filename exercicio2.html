@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Item inicial</li>
+    </ul>
+    <button id="adicionarItem">Adicionar Item</button>
+    <script>
+        let contador = 1;
+
+        function adicionarItem() {
+           
+            const novoItem = document.createElement('li');
+            novoItem.textContent = `Novo Item ${contador}`;
+
+            const botaoRemover = document.createElement('button');
+            botaoRemover.textContent = 'Remover';
+            botaoRemover.addEventListener('click', function() {
+                this.parentElement.remove();
+            });
+
+            novoItem.appendChild(botaoRemover);
+
+            const lista = document.getElementById('lista');
+            lista.appendChild(novoItem);
+
+            contador++;
+        }
+
+        document.getElementById('adicionarItem').addEventListener('click', adicionarItem);
+    </script>
+</body>
+</html>
